@@ -1,0 +1,15 @@
+<h1>Heroes <small>Marvel y DC</small></h1>
+<hr>
+
+<div class="row" *ngIf="heroes.length==0">
+    <div class="col-md-12">
+        <div class="alert alert-info" role="alert">
+            No existe el termino que esta buscando
+        </div>
+
+    </div>
+
+</div>
+<div class="card-columns">
+    <app-heroetarjeta [heroe]="hero" [index]="hero.idx" *ngFor="let hero of heroes;"> </app-heroetarjeta>
+</div>
